@@ -1,0 +1,534 @@
+/* En este archivo escriban su CSS */
+
+/* Fonts */
+/* Importar aquí la font */
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+:root{
+--padding-container: 100px 0;
+--colorGreen: #92ff73;
+--colorYellow: #fdfd5f;
+--colorBlue: #180781;
+--colorMagenta: #b70488;
+--colorPink: #ff4e92;
+--font-primary: "Sedgwick Ave Display", serif;
+--font-secundary: "Alkatra", serif;
+--font-text: "Cinzel", serif;
+}
+
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    background: var(--colorGreen);
+    align-items: center;
+}
+.container__ImgLogo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img__Logo{
+    display: flex;
+    width: 10%;
+    text-align: center;
+    align-items: center;
+    animation: animationLogo 2s 0.5s forwards;
+}
+
+@keyframes animationLogo {
+    0% {
+    transform: translateY(0) rotateY(-100deg);
+    }
+    100% {
+    transform: translateY(0) rotateY(0);
+    }
+}
+
+.text__Logo{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: var(--font-primary);
+    color: var(--colorBlue);
+}
+
+.container__LinkNav{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container__btn{
+    width: 7.5rem;
+    color: var(--colorBlue);
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 80px 20px;
+}
+
+.container__btn a{
+    font-family: var(--font-secundary);
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+.container__btn:hover{
+    color: var(--colorMagenta); text-shadow: black 0.1em 0.1em 0.2em;
+    transition: background 0.7s;
+}
+
+
+/*MENU HAMBURGUER*/
+.hamburguer {
+    /* background-color: red; */
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.show-menu .hamburguer {
+    right: 16rem;
+}
+
+.line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: var(--colorBlue);
+    box-shadow: 0.1rem 0.1rem 1px #000;
+    transition: transform 1s;
+}
+
+.show-menu #lineOne {
+    transform: rotate(45deg) translate(0.3rem, 0.45rem);
+}
+
+.show-menu #lineTwo {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #lineThree {
+    transform: rotate(-45deg) translate(0.3rem, -0.45rem);
+}
+
+.hamburguer span {
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorMagenta);
+    color: var(--colorBlue);
+    font-family: var(--font-secundary);
+    opacity: 0;
+}
+
+.hamburguer span::before {
+    content: "";
+    position: absolute;
+    border-right: 0.5rem solid var(--colorMagenta);;
+    border-top: 0.5rem solid transparent;
+    border-left: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    left: -1rem;
+}  
+
+.show-menu .hamburguer:hover span {
+    opacity: 1;
+}
+
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: #91ff73be;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 1s;
+    z-index: 1;
+}
+
+.show-menu .sidebar {
+    right: 0;
+}
+
+.menu {
+    list-style: none;
+    width: 90%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: left;
+    margin-bottom: 2.7rem;
+}
+
+.menu-link {
+    font-family: var(--font-secundary);
+    font-size: 1.9rem;
+    color: var(--colorBlue);
+    transition: color 1s;
+    text-decoration: none;
+}
+
+.menu-link:hover {
+    color: var(--colorMagenta); text-shadow: black 0.1em 0.1em 0.2em;
+    transition: background 0.7s;
+}
+/* FIN MENU HAMBURGUER*/
+
+
+.sectionImg{
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(146,255,115,1) 0%, rgba(24,7,129,1) 100%); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Container__SectionImg{
+    width: 50%;
+}
+
+.img__baner{
+    width: 50%;
+    border-radius: 40%;
+    animation: zoom 25s;
+}
+
+@keyframes zoom {
+    0% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+
+.container__title{
+    width: 50%;
+}
+.title__Principal{
+    font-family: var(--font-primary);
+    text-shadow: var(--colorBlue) 0.1em 0.1em 0.2em;
+    font-size: 500%;
+    padding-top: 2%;
+    text-align: center;
+    color: var(--colorMagenta);
+    animation: animationFont 1s 0.5s forwards;
+}
+
+/* Animation Font*/
+
+@keyframes animationFont {
+    0% {
+    transform: translateY(20rem) rotateY(-100deg);
+    }
+    100% {
+    transform: translateY(0) rotateY(0);
+    opacity: 1;
+    }
+}
+
+
+
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* CARD SERVICIOS*/
+
+.servicios{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.card{
+    position: relative;
+    width: 30rem;
+    height: 35rem;
+    background-color: #000;
+    overflow: hidden;
+    margin-bottom: 5%;
+}
+
+.card__image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.15;
+    transition: opacity 0.25, scale 0.35s;
+}
+
+.card:hover{
+    opacity: 0.5;
+    scale: 1;
+}
+
+.card__body{
+    position: absolute;
+    inset: 0;
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    justify-content: center;
+}
+
+.card__body::before{
+    content: "";
+    position: absolute;
+    inset: 20px;
+    border: 4px solid #fff;
+    opacity: 0;
+    scale: 1.25;
+    transition: opacity 0.25, scale 0.25s;
+}
+
+.card:hover{
+    opacity: 1;
+    scale: 1;
+}
+
+.card__title{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0,0,0, .5);
+}
+
+.card__description{
+    font-size: 20px;
+    opacity: 0;
+    translate: -25px;
+    transition: opacity 0.25, translate 0.25;
+}
+
+.card:hover .card__description{
+    opacity: 1;
+    translate: 0;
+}
+
+
+
+
+/* Recomendaciones! 
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/
+
+
+/* FOOTER*/
+footer{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+    color: var(--colorBlue);
+    background-color: var(--colorGreen);
+    padding: 30px;
+}
+
+.footer__Logo{
+    width: 20%;
+}
+
+.footer__RRSS{
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 4%;
+}
+
+.container__FooterLogo{
+    width: 40%;
+}
+
+footer .footer__legal{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 28px;
+    font-style: italic;
+}
+
+footer .footer__legal > a{
+    margin: 0 4px;
+}
+
+footer .footer__legal > span{
+    margin-right: 10px;
+    font-family: var(--font-secundary);
+    
+}
+
+hr{
+    width: 100%;
+    height: 1px;
+    background-color: var(--colorMagenta);
+    margin-top: 20px;
+}
+
+@media (width < 1200px) {
+
+}
+
+
+
+@media (width < 1024px) {
+    
+}
+
+
+@media (width < 620px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+    
+        .container__LinkNav{
+            display: none;
+        }
+        .hamburguer{
+            display: flex;
+        }
+
+        footer{
+            flex-direction: column;
+        }
+
+        footer .footer__Bottom{
+            gap: 16px;
+            flex-direction: column-reverse;
+        }
+}
+
+
+@media (width = 620px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+    
+        .container__LinkNav{
+            display: none;
+        }
+        .hamburguer{
+            display: flex;
+        }
+
+        footer{
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 0;
+        }
+
+        footer .footer__Bottom .footer__Link > a{
+            font-size: 24px;
+        }
+}
+
+@media (max-width: 420px) {
+    header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .container__LinkNav{
+        display: none;
+    }
+
+    footer{
+        text-align: center;
+        align-items: center;
+    }
+
+    footer .footer__Top .footer__Link{
+        grid-template-columns: 1fr;
+    }
+
+    footer .footer__Bottom{
+        align-items: center;
+    }
+
+    footer .footer__legal > span{
+        display: block;
+        margin-right: 0;
+        margin-bottom: 2px;
+    }
+}
+
