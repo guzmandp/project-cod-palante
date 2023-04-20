@@ -148,7 +148,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--colorMagenta);
+    background-color: #b7048791;
     color: var(--colorBlue);
     font-family: var(--font-secundary);
     opacity: 0;
@@ -157,7 +157,7 @@ header{
 .hamburguer span::before {
     content: "";
     position: absolute;
-    border-right: 0.5rem solid var(--colorMagenta);;
+    border-right: 0.5rem solid #b7048791;
     border-top: 0.5rem solid transparent;
     border-left: 0.5rem solid transparent;
     border-bottom: 0.5rem solid transparent;
@@ -187,8 +187,8 @@ header{
     list-style: none;
     width: 90%;
     position: absolute;
-    top: 40%;
-    left: 50%;
+    top: 60%;
+    left: 80%;
     transform: translate(-50%, -50%);
 }
 
@@ -199,7 +199,7 @@ header{
 
 .menu-link {
     font-family: var(--font-secundary);
-    font-size: 1.9rem;
+    font-size: 1.3rem;
     color: var(--colorBlue);
     transition: color 1s;
     text-decoration: none;
@@ -284,6 +284,10 @@ main {
     margin: auto;
 }
 
+body{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
 /* CARD SERVICIOS*/
 
 .servicios{
@@ -293,15 +297,19 @@ main {
     flex-direction: row;
     justify-content: space-around;
     margin: auto;
+    padding-top: 40px;
 }
 
 .card{
     position: relative;
     width: 30rem;
     height: 35rem;
-    background-color: #000;
+    background-color: #00000096;
     overflow: hidden;
     margin-bottom: 5%;
+    cursor: context-menu;
+    border-radius: 20px 20px 0 0;
+    box-shadow:  black 0.3em 0.3em 0.5em;
 }
 
 .card__image{
@@ -309,7 +317,7 @@ main {
     width: 100%;
     object-fit: cover;
     scale: 1.15;
-    transition: opacity 0.25, scale 0.35s;
+    transition: opacity 1, scale 0.35s;
 }
 
 .card:hover{
@@ -346,13 +354,14 @@ main {
 }
 
 .card__title{
+    font-size: 35px;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 1px 1px 1px rgba(0,0,0, .5);
 }
 
 .card__description{
-    font-size: 20px;
+    font-size: 25px;
     opacity: 0;
     translate: -25px;
     transition: opacity 0.25, translate 0.25;
@@ -363,7 +372,164 @@ main {
     translate: 0;
 }
 
+/* -------------------------------------------- FORMULARIO ------------------------------------------*/
+.formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+}
 
+.formulario__label {
+    display: block;
+    padding: 10px 0;
+}
+
+.formulario__grupo-input {
+    position: relative;
+}
+
+.formulario__input {
+    width: 90%;
+    background: transparent;
+    border-bottom: 2px solid var(--pinkDark);
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    color: var(--purple);
+    font-size: 17px;
+    outline: none;
+    line-height: 45px;
+    padding: 0 10px;
+    transition: all 1s;
+}
+
+.formulario__validacion-estado {
+    position: absolute;
+    right: 45px;
+    bottom: 15px;
+    z-index: 1000;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formulario__input:focus {
+    box-shadow: 0 0 5px #035f22;
+}
+
+.formulario__input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
+
+.formulario__span {
+    font-size: 1.1em;
+    font-weight: 100;
+}
+
+.formulario__checkbox{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 10px;
+}
+
+.formulario__grupo-terminos {
+    text-align: center;
+}
+
+.formulario__grupo-terminos, .formulario__mensaje, .formulario__grupo-btn-enviar {
+    grid-column: span 2;
+}
+
+.formulario__mensaje {
+    display: none;
+    /* height: 45px; */
+    /* line-height: 45px; */
+    padding: 15px;
+    border-radius: 5px;
+    background: var(--pink);
+    text-align: center;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+.formulario__grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__btn {
+    display: inline-block;
+    color: #fff;
+    justify-self: center;
+    text-decoration: none;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 32px;
+    font-family: var(--font-action);
+    background: -webkit-linear-gradient(
+        to right,
+        #0f9b0f,
+        #000000
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #0f9b0f,
+        #07e04cb2
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    opacity: 8;
+}
+
+.formulario__btn:hover {
+    opacity: 0.9;
+    color: beige;
+}
+
+.formulario__mensaje-exito {
+    font-size: 2em;
+    color: #6ff15ec0;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo { 
+    display: block;
+}
+
+
+/* --------------------------------------------- VALIDACIÓN ----------------------------------------- */
+.formulario__grupo-correcto .formulario__validacion-estado{
+    color: #6ff15ec0;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label{
+    color: #eb4848ce;
+}
+
+
+.formulario__grupo-incorrecto .formulario__validacion-estado{
+    color: #eb4848ce;;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input{
+    border: 1px solid #eb4848ce;;
+    
+}
 
 
 /* Recomendaciones! 
@@ -461,6 +627,10 @@ hr{
         }
         .hamburguer{
             display: flex;
+        }
+
+        .title__Principal{
+            font-size: 150%;
         }
 
         footer{

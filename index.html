@@ -28,8 +28,8 @@
                 <ul class="menu">
                     <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
                     <li class="menu-item"><a href="#" class="menu-link">Nosotros</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Servicios</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>
+                    <li class="menu-item"><a href="#servicios" class="menu-link">Servicios</a></li>
+                    <li class="menu-item"><a href="#contacto" class="menu-link">Contato</a></li>
                 </ul>
             </nav>
         </aside>    
@@ -93,42 +93,56 @@
         <figure class="card">
             <img class="card__image" src="./img/1.jpg" alt="">
             <figcaption class="card__body">
-                <h2 class="card_title">Diseño y desarrollo de sitios web</h2>
+                <h2 class="card__title">Diseño y desarrollo de sitios web</h2>
                 <p class="card__description">Un sitio de desarrollo web podría ofrecer servicios de diseño y desarrollo de sitios web personalizados, desde sitios web simples y estáticos hasta sitios web complejos con características interactivas y personalizadas.</p>
             </figcaption>
         </figure>
         <figure class="card">
             <img class="card__image" src="./img/2.jpg" alt="">
             <figcaption class="card__body">
-                <h2 class="card_title">Desarrollo de aplicaciones web</h2>
+                <h2 class="card__title">Desarrollo de aplicaciones web</h2>
+                <p class="card__description">Además de los sitios web, un sitio de desarrollo web también podría ofrecer servicios de desarrollo de aplicaciones web, como aplicaciones móviles, aplicaciones para redes sociales o aplicaciones empresariales.</p>
+            </figcaption>
+        </figure>
+        <figure class="card">
+            <img class="card__image" src="./img/2.jpg" alt="">
+            <figcaption class="card__body">
+                <h2 class="card__title">Desarrollo de aplicaciones web</h2>
                 <p class="card__description">Además de los sitios web, un sitio de desarrollo web también podría ofrecer servicios de desarrollo de aplicaciones web, como aplicaciones móviles, aplicaciones para redes sociales o aplicaciones empresariales.</p>
             </figcaption>
         </figure>
         <figure class="card">
             <img class="card__image" src="./img/3.jpg" alt="">
             <figcaption class="card__body">
-                <h2 class="card_title">Mantenimiento y soporte técnico</h2>
+                <h2 class="card__title">Mantenimiento y soporte técnico</h2>
                 <p class="card__description">Un sitio de desarrollo web también podría ofrecer servicios de mantenimiento y soporte técnico para garantizar que los sitios web y las aplicaciones funcionen sin problemas y estén actualizados.</p>
             </figcaption>
         </figure>
         <figure class="card">
             <img class="card__image" src="./img/4.jpg" alt="">
             <figcaption class="card__body">
-                <h2 class="card_title">Diseño gráfico y de interfaz de usuario</h2>
+                <h2 class="card__title">Diseño gráfico y de interfaz de usuario</h2>
                 <p class="card__description">Los servicios de diseño gráfico y de interfaz de usuario también podrían ser ofrecidos por un sitio de desarrollo web, con el objetivo de crear interfaces de usuario atractivas y fáciles de usar.</p>
                 </figcaption>
         </figure>
         <figure class="card">
             <img class="card__image" src="./img/5.jpg" alt="">
             <figcaption class="card__body">
-                <h2 class="card_title">Servicios de hosting y dominio</h2>
+                <h2 class="card__title">Servicios de hosting y dominio</h2>
                 <p class="card__description">Además de los servicios de diseño y desarrollo, un sitio de desarrollo web también podría ofrecer servicios de alojamiento y registro de dominio para garantizar que los sitios web y las aplicaciones estén en línea y accesibles para los usuarios.</p>
+            </figcaption>
+        </figure>
+        <figure class="card">
+            <img class="card__image" src="./img/2.jpg" alt="">
+            <figcaption class="card__body">
+                <h2 class="card__title">Desarrollo de aplicaciones web</h2>
+                <p class="card__description">Además de los sitios web, un sitio de desarrollo web también podría ofrecer servicios de desarrollo de aplicaciones web, como aplicaciones móviles, aplicaciones para redes sociales o aplicaciones empresariales.</p>
             </figcaption>
         </figure>
         <figure class="card">
             <img class="card__image" src="./img/6.jpg" alt="">
             <figcaption class="card__body">
-                <h2 class="card_title">SConsultoría y estrategia web</h2>
+                <h2 class="card__title">SConsultoría y estrategia web</h2>
                 <p class="card__description">Por último, un sitio de desarrollo web podría ofrecer servicios de consultoría y estrategia web para ayudar a los clientes a desarrollar estrategias efectivas para sus sitios web y aplicaciones, con el objetivo de aumentar la visibilidad y el rendimiento en línea.</p>
             </figcaption>
         </figure>
@@ -146,20 +160,83 @@
             </div>
         </div>
     </aside>
+    <section id="contacto" class="questions__offer">
+        <h2 
+        class="subtitle">Contato</h2>
+        <form action="#" class="formulario" id="formulario">
+            
+            <div class="formulario__grupo" id="grupo__nombre">
+                <label class="formulario__label">Nome</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nome">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">O nome deve ter minimo 4 caracteres só de números e letras
+
+                </p>
+            </div>
+
+
+
+            <div class="formulario__grupo" id="grupo__usuario">
+                <label class="formulario__label">Sobrenome</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Sobrenome"">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">O sobrenome deve ter minimo 4 caracteres só de números e letras</p>
+            </div>
+        
+            <div class="formulario__grupo" id="grupo__correo">
+                <label class="formulario__label">e-mail</label>
+                <div class="formulario__grupo-input">
+                    <input type="email" class="formulario__input" name="correo" id="correo" placeholder="email@dominio.com">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">O e-mail deve ter mÍnimo 4 caracteres de números e letras</p>
+            </div>
+            <div class="formulario__grupo" id="grupo__telefono">
+                <label class="formulario__label">Teléfone</label>
+                <div class="formulario__grupo-input">
+                    <input type="telefono" class="formulario__input" name="telefono" id="telefono" placeholder="DDD-000000000">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">O numero de telefone deve ter 10 caracteres</p>
+            </div>
+            <div class="formulario__grupo formulario__grupo-terminos" id="grupo__terminos">
+                <label class="formulario__label">
+                    <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                    <b class="formulario__span">Aceito os terminos y condições</b>
+                </label>
+            </div>
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><i class="fas fa-exclamation-circle"> <b>Erro:</b> Deves preencher todos os campos</i></p>
+            </div>
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado correctamente</p>
+                <input class="formulario__btn" type="submit" value="Enviar">
+            </div>
+        </form>
+
+
+
+
+    </section>
     <footer class="footer__Top">
         <div class="container__FooterLogo">
             <img class="footer__Logo" src="./img/logo.png" alt="logo">
         </div>
         <div class="footer__legal">
             <div>
-                <h3>&copy; 2021. Darwin Jesus Guzmán Betancourt 😎</h3>
+                <h3>&copy; 2023. Darwin Jesus Guzmán Betancourt</h3>
                 <hr>
             </div>
             <div>
-                <img class="footer__RRSS" src="./img/instagram.png" alt="">
-                <img class="footer__RRSS" src="./img/linkedin.png" alt="">
-                <img class="footer__RRSS" src="./img/github.png" alt="">
-                <img class="footer__RRSS" src="./img/facebook.png" alt="">
+                
+                <a href="https://www.instagram.com/guzmandp/" target="_blank"><img class="footer__RRSS" src="./img/instagram.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/darwin-guzm%C3%A1n-betancourt-985b4496/" target="_blank"><img class="footer__RRSS" src="./img/linkedin.png" alt=""></a>
+                <a href="https://github.com/guzmandp" target="_blank"><img class="footer__RRSS" src="./img/github.png" alt=""></a>
+                <a href="https://www.facebook.com/darwin.gdeq/" target="_blank"><img class="footer__RRSS" src="./img/facebook.png" alt=""></a>
             </div>    
         </div>
     </footer>
