@@ -9,6 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -29,7 +30,7 @@
                     <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
                     <li class="menu-item"><a href="#" class="menu-link">Nosotros</a></li>
                     <li class="menu-item"><a href="#servicios" class="menu-link">Servicios</a></li>
-                    <li class="menu-item"><a href="#contacto" class="menu-link">Contato</a></li>
+                    <li class="menu-item"><a href="#formulario" class="menu-link">Contato</a></li>
                 </ul>
             </nav>
         </aside>    
@@ -50,7 +51,7 @@
                 </a>                
             </div>
             <div class="container__btn">
-                <a href="">
+                <a href="#formulario">
                     Contacto
                 </a>                
             </div>
@@ -160,48 +161,40 @@
             </div>
         </div>
     </aside>
-    <section id="contacto" class="questions__offer">
-        <h2 
-        class="subtitle">Contato</h2>
+
+    <section class="container__Form">
         <form action="#" class="formulario" id="formulario">
-            
             <div class="formulario__grupo" id="grupo__nombre">
                 <label class="formulario__label">Nome</label>
                 <div class="formulario__grupo-input">
                     <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nome">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">O nome deve ter minimo 4 caracteres só de números e letras
-
-                </p>
-            </div>
-
-
-
+                    <p class="formulario__input-error">O nome deve ter minimo 4 caracteres só de números e letras</p>
+            </div>      
             <div class="formulario__grupo" id="grupo__usuario">
-                <label class="formulario__label">Sobrenome</label>
+                    <label class="formulario__label">Sobrenome</label>
                 <div class="formulario__grupo-input">
                     <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Sobrenome"">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">O sobrenome deve ter minimo 4 caracteres só de números e letras</p>
+                    <p class="formulario__input-error">O sobrenome deve ter minimo 4 caracteres só de números e letras</p>
             </div>
-        
-            <div class="formulario__grupo" id="grupo__correo">
-                <label class="formulario__label">e-mail</label>
+                <div class="formulario__grupo" id="grupo__correo">
+                    <label class="formulario__label">e-mail</label>
                 <div class="formulario__grupo-input">
                     <input type="email" class="formulario__input" name="correo" id="correo" placeholder="email@dominio.com">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">O e-mail deve ter mÍnimo 4 caracteres de números e letras</p>
+                    <p class="formulario__input-error">O e-mail deve ter mÍnimo 4 caracteres de números e letras</p>
             </div>
             <div class="formulario__grupo" id="grupo__telefono">
-                <label class="formulario__label">Teléfone</label>
+                    <label class="formulario__label">Teléfone</label>
                 <div class="formulario__grupo-input">
-                    <input type="telefono" class="formulario__input" name="telefono" id="telefono" placeholder="DDD-000000000">
-                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <input type="telefono" class="formulario__input" name="telefono" id="telefono" placeholder="DDD-000000000">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">O numero de telefone deve ter 10 caracteres</p>
+                    <p class="formulario__input-error">O numero de telefone deve ter 10 caracteres</p>
             </div>
             <div class="formulario__grupo formulario__grupo-terminos" id="grupo__terminos">
                 <label class="formulario__label">
@@ -217,7 +210,7 @@
                 <input class="formulario__btn" type="submit" value="Enviar">
             </div>
         </form>
-
+    </section>    
 
 
 
@@ -241,5 +234,6 @@
         </div>
     </footer>
     <script src="./js/script.js"></script>
+    <script src="./js/form.js"></script>
 </body>
 </html>
