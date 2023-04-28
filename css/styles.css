@@ -39,12 +39,14 @@ header{
     background: var(--colorGreen);
     align-items: center;
 }
+
 .container__ImgLogo{
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .img__Logo{
     display: flex;
     width: 10%;
@@ -79,7 +81,6 @@ header{
 
 .container__btn{
     width: 7.5rem;
-    color: var(--colorBlue);
     padding: 10px;
     margin: 20px;
     text-align: center;
@@ -88,17 +89,17 @@ header{
 
 .container__btn a{
     font-family: var(--font-secundary);
+    color: var(--colorBlue);
     font-size: 1.6rem;
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
-
 }
-.container__btn:hover{
+
+.container__btn a:hover{
     color: var(--colorMagenta); text-shadow: black 0.1em 0.1em 0.2em;
     transition: background 0.7s;
 }
-
 
 /*MENU HAMBURGUER*/
 .hamburguer {
